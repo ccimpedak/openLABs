@@ -1,0 +1,8 @@
+__history/
+__recovery/
+db/
+docs/
+lib/
+Win32/
+Win64/
+libmysql.dll

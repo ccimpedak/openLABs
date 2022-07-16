@@ -1,0 +1,483 @@
+object frmSetting: TfrmSetting
+  Left = 0
+  Top = 0
+  ClientHeight = 537
+  ClientWidth = 654
+  Caption = 'Pengaturan'
+  BorderStyle = bsDialog
+  OldCreateOrder = False
+  MonitoredKeys.Keys = <>
+  Font.Height = -13
+  Font.Name = 'Roboto'
+  OnBeforeShow = UniFormBeforeShow
+  OnAfterShow = UniFormAfterShow
+  PixelsPerInch = 96
+  TextHeight = 15
+  object UniPageControl1: TUniPageControl
+    Left = 0
+    Top = 0
+    Width = 654
+    Height = 537
+    Hint = ''
+    ActivePage = UniTabSheet1
+    Align = alClient
+    TabOrder = 0
+    object UniTabSheet1: TUniTabSheet
+      Hint = ''
+      Caption = 'Akun'
+      object UniContainerPanel1: TUniContainerPanel
+        Left = 0
+        Top = 472
+        Width = 646
+        Height = 35
+        Hint = ''
+        ParentColor = False
+        Align = alBottom
+        TabOrder = 0
+        object btnTambah: TUniSpeedButton
+          Left = 3
+          Top = 6
+          Width = 94
+          Height = 26
+          Hint = ''
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            1800000000000003000000000000000000000000000000000000FFFFFFFFFFFF
+            FFFFFFFFFFFFBBE4C270CF8527B7471EBA401EBA4027B74770CF85BBE4C2FFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAFDFA4FB96219C1401FCE4C24DC5827
+            DD5C27DD5C24DC581FCE4C19C1404FB962FAFDFAFFFFFFFFFFFFFFFFFFFBFDFB
+            21A93A1ED04E22D55521D35503B82C00A71200A71203B82C21D35522D5551ED0
+            4E21A93AFBFDFBFFFFFFFFFFFF4EB15B1ECE4D21D3541FCC4D0FCC4500AD13FF
+            FFFFFFFFFF00AD130FCC451FCC4D21D3541ECE4D4EB15BFFFFFFBDDEBE17BA3F
+            21DA5A1ECC5120D0530DC74200BE25FFFFFFFFFFFF00BE250DC74220D0531ECC
+            5121DA5A17BA3FBDDEBE6ABC7417D15120D45F0BCC4A04CA4300C13300BC22FF
+            FFFFFFFFFF00BD2700C23B10CA4B0ECC4C20D45F17D1516ABC7430A03F33E67A
+            00B62D00AD1300AD1300AD1300AD13FFFFFFFFFFFF00AD1300BD2700BD2300AD
+            1300B62D33E67A30A14130A34381FCC300AF21FFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00AF2181FCC430A14223953785FDCC
+            2AC262FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FF2AC26285FDCC23953533933D7BFAC33CD07D71C7801EBF5921C05B0ABA4DFF
+            FFFFFFFFFF10BC5122C05C1EBF5971C7803CD07D7BFAC333933D67AB668AE5B9
+            65EAB050DF9756DF9C41DB8D22C05CFFFFFFFFFFFF22C05C49DC9356DF9C50DF
+            9765EAB08AE5B967AB66B9D4B94EB068AFFFEA5EE0A156E19F45DE9766D589FF
+            FFFFFFFFFF23C05B50E09E56E19F5EE0A1AFFFEA4EB068B9D4B9FFFFFF458945
+            7BDCA8B6FFEF76E5B551DFA366D589FFFFFFFFFFFF24BF5956E2A876E5B5B6FF
+            EF7BDCA8458945FFFFFFFFFFFFFAFDFA1572156DD6A3B7FFF5AAF7E370E0B022
+            C05C22C05C74E2B3ABF7E4B7FFF56DD6A3157215FAFDFAFFFFFFFFFFFFFFFFFF
+            F9FCF945864538A75E7FE1B8A9FFECB9FFFBB9FFFBA9FFEC7FE1B838A75E4586
+            45F9FCF9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB7CEB767A567247D3328
+            8738288738247D3367A567B7CEB7FFFFFFFFFFFFFFFFFFFFFFFF}
+          Caption = 'Tambah'
+          ParentColor = False
+          Color = clWindow
+          TabOrder = 1
+          OnClick = btnTambahClick
+        end
+        object btnEdit: TUniSpeedButton
+          Left = 103
+          Top = 6
+          Width = 94
+          Height = 26
+          Hint = ''
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            18000000000000030000000000000000000000000000000000000A2B95062082
+            C3CCE7C2D6F5E1ECFAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFF8999CB0000584E9FDF4CBFF81467D4556FC6FFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCCCEE68AADDC
+            C3FFFF95EBFF58D0FD0773D93556BDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFBDCCEA92BAE5FFFFFF79DFFF0EA4EE0B6DD50E7FE033
+            61C5FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D7ECF
+            DBFFFF06DFFA00C3FC119EEA1272D70D80E13C6BCBFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFF4A5AC235B9E40AFFFF00D8F600C8FE119CEA12
+            71D60D7FDF3767CBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            2F4DBF3AD2EC12FFFF00D9F600C8FE119CEA1271D50D80DE3E6FCFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF3A52C339D4ED12FFFF00D8F600
+            C8FE119CEA1271D50D7FDF386BD1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFF3551C33AD1EC0CFFFD00D9F600C8FE119CEA126FD50C80DF4278
+            D4FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF3F5AC959F0F607
+            FFFB00D8F600C8FE119CEA1371D60B7FE32562D2FFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFF4966CD67F6F803FFFA00D8F600C8FE0EA9F70052
+            BE627590749ADBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF52
+            6ED268F8F905FFFA00E6FF00A4E9627992FFFFE97976B8345CD6FFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4D6CD266FFFF00E9E1639AA3FFFF
+            FC6B6FAA0000DD0D27EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFF4576D880B6BCFFFFFC6D7CAD0000DA0007FF0D26E8FFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6089E884A6BC0C6C
+            E21458FF0B21EDDCE1FBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFF427BDB44AFF8388BEFE2E8FDFFFFFF}
+          Caption = 'Edit'
+          ParentColor = False
+          Color = clWindow
+          TabOrder = 2
+          OnClick = btnEditClick
+        end
+        object UniSpeedButton1: TUniSpeedButton
+          Left = 203
+          Top = 6
+          Width = 94
+          Height = 26
+          Hint = ''
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            1800000000000003000000000000000000000000000000000000FFFFFF5253FF
+            0F11FD0F11FDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFEF
+            FD3B3BED8383EAFFFFFF4E47FF252DFF2A49FF1D31FE8684FCFCFBFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFF3C3CE90C0EFA9E9EEFFFFFFF211AFF314CFF
+            2E53FF2746FF131FFCBDBBFCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC6C5F50C0B
+            F90808E4CDCDF7FFFFFF6F6DFF495FFF3156FF2441FF1D36FF4646F6FFFFFFFF
+            FFFFFFFFFFFFFFFFC3C1F21611EA0E0BFB7A7AEBFDFDFFFFFFFFC7C7FF3538FE
+            4D6CFF203DFF1F3AFF131FFEC6C5F9FFFFFFFFFFFFC8C6F30F0AE40E07FF0A06
+            F0B1B0EEFFFFFFFFFFFFFFFFFFC7C6FF4951FF405EFF1832FF1A2EFF191AEDCB
+            C9F3CBC9F31611E40C07FF0E07FF332ED7E5E4F6FFFFFFFFFFFFFFFFFFFFFFFF
+            A1A0FF4553FF314CFF1629FF141EFF0A07DD0D08E00F0AFF100AFF0702E38F8D
+            E6FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE6E6FF4643FC4B5CFE283EFF1521FF11
+            15FD1111FF130FFF0D08F87674E3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFAF9FF5554F94652FD202CFF181CFF1615FF110FFD1A15DED3D2F6FFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF3F3FF6566FB2A37FD242FFF19
+            1EFF1615FF110EF3C0BFF3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+            A8AAFF626BFF667CFF5D71FF545FFF6268FF5A5BFF302CFF4641EFA4A1EDFFFF
+            FFFFFFFFFFFFFFFFFFFFD5D3FF979FFF7189FF718BFF687DFF6578FF7883FF76
+            73F68481F88986FF635DFF4C45F2A6A4EDFFFFFFFFFFFFFFFFFF8F9AFF829EFF
+            7C97FF7289FF7389FF8996FE7A78F8DAD8FCDBDAFC7A76F18F8BFC7C76FF5B59
+            F7A2A1F2DCDBF7FFFFFF8F9AFF92B0FF849EFF8CA1FF939DFE746FF9D9D7FDFF
+            FFFFFFFFFFDEDDFBAFADF48B86F19693FE888BFB7077EEDDDEF9BFBEFFA4AEFF
+            A3AEFF9194FE716AF9D7D5FDFFFFFFFFFFFFFFFFFFFFFFFFF5F5FEDCDCF89E9C
+            EB8685EB959BF07F85E8D6D4FFB9B8FFA09FFF8C88FEDBD9FDFEFEFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFE6E5FAA3A0EB8A89E07E82E6}
+          Caption = 'Hapus'
+          ParentColor = False
+          Color = clWindow
+          TabOrder = 3
+          OnClick = UniSpeedButton1Click
+        end
+      end
+      object UniDBGrid1: TUniDBGrid
+        Left = 0
+        Top = 0
+        Width = 646
+        Height = 472
+        Hint = ''
+        DataSource = DSUser
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgAutoRefreshRow]
+        WebOptions.Paged = False
+        LoadMask.Message = 'Loading data...'
+        Align = alClient
+        TabOrder = 1
+        Columns = <
+          item
+            FieldName = 'user_name'
+            Title.Caption = 'Akun'
+            Width = 84
+            Font.Name = 'Roboto'
+          end
+          item
+            FieldName = 'nama'
+            Title.Caption = 'Nama'
+            Width = 180
+            Font.Name = 'Roboto'
+          end
+          item
+            FieldName = 'profile'
+            Title.Caption = 'Profil'
+            Width = 129
+            Font.Name = 'Roboto'
+            ReadOnly = True
+          end
+          item
+            FieldName = 'email'
+            Title.Caption = 'Email'
+            Width = 217
+            Font.Name = 'Roboto'
+          end>
+      end
+    end
+    object UniTabSheet2: TUniTabSheet
+      Hint = ''
+      Caption = 'Email'
+      object UniGroupBox1: TUniGroupBox
+        Left = 3
+        Top = 3
+        Width = 640
+        Height = 154
+        Hint = ''
+        Caption = 'SMTP config'
+        TabOrder = 0
+        object UniLabel1: TUniLabel
+          Left = 16
+          Top = 24
+          Width = 65
+          Height = 15
+          Hint = ''
+          Caption = 'Mail server'
+          TabOrder = 6
+        end
+        object edMailServer: TUniEdit
+          Left = 84
+          Top = 19
+          Width = 237
+          Hint = ''
+          Text = ''
+          TabOrder = 1
+        end
+        object UniLabel2: TUniLabel
+          Left = 16
+          Top = 52
+          Width = 34
+          Height = 15
+          Hint = ''
+          Caption = 'Name'
+          TabOrder = 7
+        end
+        object UniLabel3: TUniLabel
+          Left = 327
+          Top = 24
+          Width = 24
+          Height = 15
+          Hint = ''
+          Caption = 'Port'
+          TabOrder = 8
+        end
+        object edPort: TUniNumberEdit
+          Left = 356
+          Top = 19
+          Width = 69
+          Hint = ''
+          Alignment = taCenter
+          TabOrder = 2
+          DecimalSeparator = '.'
+        end
+        object edName: TUniEdit
+          Left = 84
+          Top = 47
+          Width = 133
+          Hint = ''
+          Text = ''
+          TabOrder = 3
+        end
+        object UniSpeedButton2: TUniSpeedButton
+          Left = 531
+          Top = 113
+          Width = 94
+          Height = 26
+          Hint = ''
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            1800000000000003000000000000000000000000000000000000C1761BC27519
+            BD6B13B96504B96504B96504BA6504BA6504BA6504BA6504BA6504BA6504BA65
+            04BC690AB96A15C3791FD5933DEFB736CDC6C0E9F8FFDBE5F6DBE8F8DBE8F8DB
+            E8F9DBE8F8DAE7F8DBE7F8D8E4F5E9F6FFCDC6C0EAA714C0761DCD9551E8AE3C
+            DCD7D4ECE8E9ADA0A2A79B9E9E939594898C8A818583797C7B7276685F64ECE8
+            E9DCD7D4E59E20C77B25D09653EAB447DCD7D4EFF0EFDFDEDCE1E0DFE0DFDEDF
+            E0DDE0DFDDDFDEDDDFE0DEDBD9D9EDEDEDDCD7D4E7A62BC9802BD49B58EBB950
+            DCD7D4ECE8E9A99D9FA4999E9A919492888B897F8582797C7A7177655C62ECE8
+            E9DCD7D4E8AC37CC8531D69E5BEDBD5ADCD7D4FFFFFFFFFEFEFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDCD7D4EAB340D08B34D9A45EF0C263
+            DCD7D4ECE8E9A99D9FA4999E9A919492888B897F8582797C7A7177655C62ECE8
+            E9DCD7D4EDB749D2903AD8A35CF0C66DDCD7D4FFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDCD7D4EEBD54D7963EDEAC69F9D281
+            C1975C9A7B6095775E97795D97795D97795D97795D97795C97795C95775E9A7A
+            5EC19A64F7CA6BD99B44DDAB67F6D58BFFD056C0A887C8C5C9CEC6BFCDC6C0CD
+            C6C0CDC6BFD6D0CAD6D3D0CFCED4C0A888FFD25DF3CC75DCA148DCA966F6D993
+            FBC85DC2B4A2D7DEEBDDDDDDDCDDDEDCDBDDE7E8EAC8BAA7A29692C2B4A2C6BC
+            A9FBCB63F3D07EE0A74CE5B973F6DA97FBCC62C8BAA7DDE0E9E1DFDDE0DFDEDF
+            DDDCEFF3F99F886FE5AF479E9189C7BDB2FDCF6AF5D484E3AC51E9BC75F8DD9E
+            FDCF69CEC0AFE3E7EFE7E5E3E6E5E4E5E4E2F1F6FFBAA386FFE873B5AB9ECAC0
+            B8FFD26EF9DA8EE7B25BEAC079F8E09BFBD165D3C4AFEAEEF6ECEBE8ECEBE9EB
+            E9E6FBFFFFA28E78DEAF4FA89C95D1C7B9FFDA78F5D889E2A442ECC47EFEF4D5
+            FFE290DCD7D4F5FFFFF6FEFFF6FEFFF6FDFFFFFFFFDFDDDCC8BAA7DFDDDCE5E4
+            E2FFDE88E4AA45FCF5ECECC681F0CA82F4CA7DE8C788EFCF94EFD498EDCF92EE
+            D092EED093F2D396F7D79BF6D69BE6C48AEBB552FDF9F2FFFFFF}
+          Caption = 'Simpan'
+          ParentColor = False
+          Color = clWindow
+          TabOrder = 9
+          OnClick = UniSpeedButton2Click
+        end
+        object edPassword: TUniEdit
+          Left = 84
+          Top = 106
+          Width = 133
+          Hint = ''
+          PasswordChar = '*'
+          Text = ''
+          TabOrder = 5
+        end
+        object edUsername: TUniEdit
+          Left = 84
+          Top = 75
+          Width = 133
+          Hint = ''
+          Text = ''
+          TabOrder = 4
+        end
+        object UniLabel4: TUniLabel
+          Left = 16
+          Top = 78
+          Width = 60
+          Height = 15
+          Hint = ''
+          Caption = 'Username'
+          TabOrder = 10
+        end
+        object UniLabel5: TUniLabel
+          Left = 16
+          Top = 109
+          Width = 58
+          Height = 15
+          Hint = ''
+          Caption = 'Password'
+          TabOrder = 11
+        end
+      end
+      object UniGroupBox2: TUniGroupBox
+        Left = 3
+        Top = 160
+        Width = 640
+        Height = 344
+        Hint = ''
+        Caption = 'Message template'
+        TabOrder = 1
+        object UniLabel6: TUniLabel
+          Left = 16
+          Top = 21
+          Width = 43
+          Height = 15
+          Hint = ''
+          Caption = 'Subject'
+          TabOrder = 1
+        end
+        object edSubject: TUniEdit
+          Left = 84
+          Top = 17
+          Width = 541
+          Hint = ''
+          Text = ''
+          TabOrder = 4
+        end
+        object mmBody: TUniHTMLMemo
+          Left = 84
+          Top = 45
+          Width = 541
+          Height = 252
+          Hint = ''
+          Color = clWindow
+          TabOrder = 5
+        end
+        object UniSpeedButton3: TUniSpeedButton
+          Left = 531
+          Top = 303
+          Width = 94
+          Height = 26
+          Hint = ''
+          Glyph.Data = {
+            36030000424D3603000000000000360000002800000010000000100000000100
+            1800000000000003000000000000000000000000000000000000C1761BC27519
+            BD6B13B96504B96504B96504BA6504BA6504BA6504BA6504BA6504BA6504BA65
+            04BC690AB96A15C3791FD5933DEFB736CDC6C0E9F8FFDBE5F6DBE8F8DBE8F8DB
+            E8F9DBE8F8DAE7F8DBE7F8D8E4F5E9F6FFCDC6C0EAA714C0761DCD9551E8AE3C
+            DCD7D4ECE8E9ADA0A2A79B9E9E939594898C8A818583797C7B7276685F64ECE8
+            E9DCD7D4E59E20C77B25D09653EAB447DCD7D4EFF0EFDFDEDCE1E0DFE0DFDEDF
+            E0DDE0DFDDDFDEDDDFE0DEDBD9D9EDEDEDDCD7D4E7A62BC9802BD49B58EBB950
+            DCD7D4ECE8E9A99D9FA4999E9A919492888B897F8582797C7A7177655C62ECE8
+            E9DCD7D4E8AC37CC8531D69E5BEDBD5ADCD7D4FFFFFFFFFEFEFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDCD7D4EAB340D08B34D9A45EF0C263
+            DCD7D4ECE8E9A99D9FA4999E9A919492888B897F8582797C7A7177655C62ECE8
+            E9DCD7D4EDB749D2903AD8A35CF0C66DDCD7D4FFFFFFFFFFFFFFFFFFFFFFFFFF
+            FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFDCD7D4EEBD54D7963EDEAC69F9D281
+            C1975C9A7B6095775E97795D97795D97795D97795D97795C97795C95775E9A7A
+            5EC19A64F7CA6BD99B44DDAB67F6D58BFFD056C0A887C8C5C9CEC6BFCDC6C0CD
+            C6C0CDC6BFD6D0CAD6D3D0CFCED4C0A888FFD25DF3CC75DCA148DCA966F6D993
+            FBC85DC2B4A2D7DEEBDDDDDDDCDDDEDCDBDDE7E8EAC8BAA7A29692C2B4A2C6BC
+            A9FBCB63F3D07EE0A74CE5B973F6DA97FBCC62C8BAA7DDE0E9E1DFDDE0DFDEDF
+            DDDCEFF3F99F886FE5AF479E9189C7BDB2FDCF6AF5D484E3AC51E9BC75F8DD9E
+            FDCF69CEC0AFE3E7EFE7E5E3E6E5E4E5E4E2F1F6FFBAA386FFE873B5AB9ECAC0
+            B8FFD26EF9DA8EE7B25BEAC079F8E09BFBD165D3C4AFEAEEF6ECEBE8ECEBE9EB
+            E9E6FBFFFFA28E78DEAF4FA89C95D1C7B9FFDA78F5D889E2A442ECC47EFEF4D5
+            FFE290DCD7D4F5FFFFF6FEFFF6FEFFF6FDFFFFFFFFDFDDDCC8BAA7DFDDDCE5E4
+            E2FFDE88E4AA45FCF5ECECC681F0CA82F4CA7DE8C788EFCF94EFD498EDCF92EE
+            D092EED093F2D396F7D79BF6D69BE6C48AEBB552FDF9F2FFFFFF}
+          Caption = 'Simpan'
+          ParentColor = False
+          Color = clWindow
+          TabOrder = 2
+          OnClick = UniSpeedButton3Click
+        end
+        object UniLabel7: TUniLabel
+          Left = 16
+          Top = 45
+          Width = 29
+          Height = 15
+          Hint = ''
+          Caption = 'Body'
+          TabOrder = 3
+        end
+      end
+    end
+  end
+  object QUser: TFDQuery
+    Connection = UniMainModule.FDConnection1
+    SQL.Strings = (
+      
+        'select aguser.id,aguser.user_name, aguser.nama,user_profile.nama' +
+        ' profile,jenis_kelamin.nama jenis_kelamin,aguser.email'
+      'from'
+      'aguser'
+      
+        'left join jenis_kelamin on aguser.jenis_kelamin_id = jenis_kelam' +
+        'in.id'
+      
+        'left join user_profile on aguser.user_profile_id = user_profile.' +
+        'id'
+      'WHERE'
+      'flg_aktif = '#39'Y'#39
+      'and aguser.organisasi_id = :organisasi_id'
+      'order by aguser.user_name')
+    Left = 124
+    Top = 474
+    ParamData = <
+      item
+        Name = 'ORGANISASI_ID'
+        DataType = ftString
+        ParamType = ptInput
+        Value = '0'
+      end>
+  end
+  object DSUser: TDataSource
+    DataSet = QUser
+    Left = 84
+    Top = 466
+  end
+  object cmdExec: TFDCommand
+    Connection = UniMainModule.FDConnection1
+    Left = 44
+    Top = 466
+  end
+  object QParams: TFDQuery
+    Connection = UniMainModule.FDConnection1
+    SQL.Strings = (
+      
+        'select * from parameters where name = :name and organisasi_id = ' +
+        ':organisasi_id ')
+    Left = 279
+    Top = 485
+    ParamData = <
+      item
+        Name = 'NAME'
+        DataType = ftString
+        ParamType = ptInput
+        Value = ''
+      end
+      item
+        Name = 'ORGANISASI_ID'
+        DataType = ftString
+        ParamType = ptInput
+        Value = '0'
+      end>
+  end
+  object cmdUpdate: TFDCommand
+    Connection = UniMainModule.FDConnection1
+    Left = 191
+    Top = 485
+  end
+end
