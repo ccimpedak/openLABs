@@ -196,7 +196,7 @@ object MainForm: TMainForm
           Hint = ''
           Alignment = taCenter
           AutoSize = False
-          Caption = 'openlabs.sourceforge.io'
+          Caption = 'https://github.com/ccimpedak/openLABs'
           Align = alBottom
           ParentFont = False
           Font.Color = clGray
