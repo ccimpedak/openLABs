@@ -50,10 +50,20 @@ type
     edAbbr: TUniEdit;
     cbConfidential: TUniCheckBox;
     edKode: TUniEdit;
+    cbAdaHarga: TUniCheckBox;
+    UniTabSheet1: TUniTabSheet;
+    UniContainerPanel5: TUniContainerPanel;
+    UniDBGrid3: TUniDBGrid;
+    QNilaiNormal: TFDQuery;
+    dsNilaiNormal: TDataSource;
+    UniButton1: TUniButton;
+    UniButton2: TUniButton;
+    btnNNBaru: TUniButton;
+    UniButton4: TUniButton;
     procedure UniFormBeforeShow(Sender: TObject);
     procedure edCariNamaChange(Sender: TObject);
     procedure UniDBGrid1CellClick(Column: TUniDBGridColumn);
-    procedure UniButton3Click(Sender: TObject);
+    procedure btnNNBaruClick(Sender: TObject);
     procedure UniButton2Click(Sender: TObject);
     procedure btnHapusClick(Sender: TObject);
     procedure UniSpeedButton1Click(Sender: TObject);
@@ -76,7 +86,7 @@ implementation
 {$R *.dfm}
 
 uses
-  MainModule, uniGUIApplication, UnitHarga, UnitSelTest;
+  MainModule, uniGUIApplication, UnitHarga, UnitSelTest, UnitNilaiNormal;
 
 procedure TfrmAdmTest.btnHargaClick(Sender: TObject);
 begin
@@ -87,9 +97,11 @@ end;
 procedure TfrmAdmTest.btnSaveClick(Sender: TObject);
 var
   confidential: Integer;
+  ada_harga: string;
 begin
 
   confidential := 0;
+  ada_harga := 'N';
 
   if edKode.Text = '' then
   begin
@@ -161,6 +173,9 @@ begin
   if cbConfidential.Checked then
     confidential := 1;
 
+  if cbAdaHarga.Checked then
+    ada_harga := 'Y';
+
   if cmdExec.Active then
     cmdExec.Active := False;
   cmdExec.Params.Clear;
@@ -172,6 +187,7 @@ begin
   cmdExec.Params.Add.Name := 'abbreviation';
   cmdExec.Params.Add.Name := 'flg_confidential';
   cmdExec.Params.Add.Name := 'organisasi_id';
+  cmdExec.Params.Add.Name := 'ada_harga';
   // cmdExec.ParamByName('id').Value := edKode.Value;
 
   // cmdExec.CommandText.Text :=
@@ -184,7 +200,7 @@ begin
   // cmdExec.Prepare();
 
   cmdExec.CommandText.Text :=
-    'update test set tube_id = :tube_id, abbreviation = :abbreviation, nama = :nama, flg_confidential = :flg_confidential where kode = :kode and organisasi_id = :organisasi_id';
+    'update test set tube_id = :tube_id, abbreviation = :abbreviation, nama = :nama, flg_confidential = :flg_confidential, ada_harga = :ada_harga where kode = :kode and organisasi_id = :organisasi_id';
 
   cmdExec.ParamByName('kode').Value := edKode.Text;
   cmdExec.ParamByName('nama').Value := edNama.Text;
@@ -192,6 +208,7 @@ begin
   cmdExec.ParamByName('tube_id').Value := QTubes.FieldByName('id').AsString;
   cmdExec.ParamByName('abbreviation').Value := edAbbr.Text;
   cmdExec.ParamByName('flg_confidential').Value := confidential;
+  cmdExec.ParamByName('ada_harga').Value := ada_harga;
   cmdExec.ParamByName('organisasi_id').Value := UniApplication.Cookies.GetCookie
     ('OrganisasiId');
 
@@ -242,15 +259,22 @@ begin
       .AsString);
     edAbbr.Text := QTest.FieldByName('abbreviation').AsString;
     cbConfidential.Checked := False;
+    cbAdaHarga.Checked := False;
     if QTest.FieldByName('flg_confidential').AsInteger > 0 then
       cbConfidential.Checked := True;
+    if QTest.FieldByName('ada_harga').AsString = 'Y' then
+      cbAdaHarga.Checked := True;
 
     if QConTest.Active then
       QConTest.Active := False;
     QConTest.ParamByName('test_id').Value := QTest.FieldByName('id').AsString;
     QConTest.Active := True;
 
-    pcAddConf.ActivePage := tsGeneral;
+    if QNilaiNormal.Active then
+      QNilaiNormal.Active := False;
+    QNilaiNormal.ParamByName('test_id').Value :=
+      QTest.FieldByName('id').AsString;
+    QNilaiNormal.Active := True;
   end;
 
 end;
@@ -284,14 +308,15 @@ begin
 
 end;
 
-procedure TfrmAdmTest.UniButton3Click(Sender: TObject);
+procedure TfrmAdmTest.btnNNBaruClick(Sender: TObject);
 begin
-  btnSave.Caption := 'Simpan';
-  edKode.Text := '';
-  edNama.Text := '';
-  // edHarga.Text := '';
-  edAbbr.Text := '';
-  edKode.SetFocus;
+//  btnSave.Caption := 'Simpan';
+//  edKode.Text := '';
+//  edNama.Text := '';
+//  // edHarga.Text := '';
+//  edAbbr.Text := '';
+//  edKode.SetFocus;
+frmNilaiNormal.ShowModal;
 end;
 
 procedure TfrmAdmTest.UniDBGrid1CellClick(Column: TUniDBGridColumn);
@@ -309,6 +334,8 @@ begin
   QTubes.ParamByName('organisasi_id').Value := UniApplication.Cookies.GetCookie
     ('OrganisasiId');
   QTubes.Active := True;
+
+  pcAddConf.ActivePage := tsGeneral;
 
   // frmAdmTest.Caption := UniApplication.Cookies.GetCookie('OrganisasiId');
 end;

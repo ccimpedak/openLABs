@@ -26,7 +26,7 @@ object frmPasienBaru: TfrmPasienBaru
   object UniLabel1: TUniLabel
     Left = 178
     Top = 96
-    Width = 32
+    Width = 34
     Height = 15
     Hint = ''
     Caption = 'Prefix'
@@ -54,7 +54,7 @@ object frmPasienBaru: TfrmPasienBaru
   object UniLabel3: TUniLabel
     Left = 178
     Top = 170
-    Width = 30
+    Width = 32
     Height = 15
     Hint = ''
     Caption = 'Umur'
@@ -81,7 +81,7 @@ object frmPasienBaru: TfrmPasienBaru
   object UniLabel6: TUniLabel
     Left = 380
     Top = 145
-    Width = 23
+    Width = 24
     Height = 15
     Hint = ''
     Caption = 'Hari'
@@ -90,7 +90,7 @@ object frmPasienBaru: TfrmPasienBaru
   object UniLabel7: TUniLabel
     Left = 178
     Top = 197
-    Width = 48
+    Width = 50
     Height = 15
     Hint = ''
     Caption = 'Tgl Lahir'
@@ -134,7 +134,7 @@ object frmPasienBaru: TfrmPasienBaru
   object UniLabel11: TUniLabel
     Left = 178
     Top = 448
-    Width = 45
+    Width = 46
     Height = 15
     Hint = ''
     Caption = 'Telepon'
@@ -179,7 +179,7 @@ object frmPasienBaru: TfrmPasienBaru
   object UniLabel13: TUniLabel
     Left = 178
     Top = 503
-    Width = 35
+    Width = 37
     Height = 15
     Hint = ''
     Caption = 'e-mail'
@@ -188,7 +188,7 @@ object frmPasienBaru: TfrmPasienBaru
   object UniLabel14: TUniLabel
     Left = 178
     Top = 529
-    Width = 56
+    Width = 57
     Height = 15
     Hint = ''
     Caption = 'Gol Darah'

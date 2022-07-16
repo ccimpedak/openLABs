@@ -503,7 +503,7 @@ procedure AddTest();
 var
   I, id_tes: Integer;
   fTotal: Currency;
-  tmpStr: String;
+  tmpStr, tipe_pasien_id: String;
   formatSettings: TFormatSettings;
 begin
   frmFODaftar.ShowMask('Loading');
@@ -540,14 +540,18 @@ begin
   frmFODaftar.GrdPemeriksaan.Cells[1, frmFODaftar.GrdPemeriksaan.rowcount - 2]
     := frmFODaftar.QTest.FieldByName('nama').AsString;
 
+  tipe_pasien_id := '0';
+  if frmFODaftar.QTipePasien.RecordCount > 0 then
+    tipe_pasien_id := frmFODaftar.QTipePasien.FieldByName('id').AsString;
+
   // // ambil harga
   if frmFODaftar.QCheckTest.Active then
     frmFODaftar.QCheckTest.Active := False;
   frmFODaftar.QCheckTest.SQL.Text :=
     ' SELECT harga.id,IFNULL(harga.harga,0) harga FROM harga LEFT JOIN tipe_pasien ON harga.tipe_pasien_id = tipe_pasien.id LEFT JOIN urgency ON harga.urgency_id = urgency.id WHERE '
     + ' test_id = ' + QuotedStr(frmFODaftar.QTest.FieldByName('id').AsString) +
-    ' AND tipe_pasien.id = ' + frmFODaftar.QTipePasien.FieldByName('id')
-    .AsString + '  AND urgency.id = 1';
+    ' AND tipe_pasien.id = ' + tipe_pasien_id + '  AND urgency.id = 1';
+
   frmFODaftar.QCheckTest.Active := True;
 
   if frmFODaftar.QCheckTest.RecordCount > 0 then
@@ -2018,11 +2022,11 @@ begin
     QOrder.Params.Add.Name := 'id';
     QOrder.SQL.Clear;
     QOrder.SQL.Text :=
-      'SELECT test_kode,nama_test,harga FROM order_detail WHERE header_id = :id AND cetak_nota = '
-      + QuotedStr('Y') + ' ';
+      'SELECT test_kode,nama_test,harga FROM order_detail WHERE header_id = :id ';
     QOrder.ParamByName('id').Value := order_id;
     QOrder.Active := True;
     QOrder.First;
+
     while not QOrder.Eof do
     begin
       GrdPemeriksaan.rowcount := GrdPemeriksaan.rowcount + 1;

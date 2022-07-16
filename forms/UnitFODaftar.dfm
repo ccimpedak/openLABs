@@ -1472,7 +1472,7 @@ object frmFODaftar: TfrmFODaftar
         Name = 'ORGANISASI_ID'
         DataType = ftString
         ParamType = ptInput
-        Value = '0'
+        Value = '1'
       end>
   end
   object DSTest: TDataSource
@@ -1817,8 +1817,9 @@ object frmFODaftar: TfrmFODaftar
     ParamData = <
       item
         Name = 'ORGANISASI_ID'
+        DataType = ftString
         ParamType = ptInput
-        Value = Null
+        Value = '0'
       end>
   end
   object DSPaket: TDataSource

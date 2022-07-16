@@ -81,7 +81,8 @@ uses
   UnitDataModule in 'UnitDataModule.pas' {DatModule: TDataModule},
   UnitParameters in 'utils\UnitParameters.pas',
   UnitDBHelper in 'utils\UnitDBHelper.pas',
-  UnitSampleReceive in 'units\UnitSampleReceive.pas' {uniSampleReceive: TUniFrame};
+  UnitSampleReceive in 'units\UnitSampleReceive.pas' {uniSampleReceive: TUniFrame},
+  UnitNilaiNormal in 'forms\UnitNilaiNormal.pas' {frmNilaiNormal: TUniForm};
 
 {$R *.res}
 

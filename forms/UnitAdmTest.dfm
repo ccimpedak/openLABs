@@ -2,7 +2,7 @@ object frmAdmTest: TfrmAdmTest
   Left = 0
   Top = 0
   ClientHeight = 546
-  ClientWidth = 910
+  ClientWidth = 964
   Caption = 'Test'
   BorderStyle = bsDialog
   OldCreateOrder = False
@@ -15,7 +15,7 @@ object frmAdmTest: TfrmAdmTest
   object UniContainerPanel1: TUniContainerPanel
     Left = 0
     Top = 0
-    Width = 473
+    Width = 465
     Height = 546
     Hint = ''
     ParentColor = False
@@ -24,7 +24,7 @@ object frmAdmTest: TfrmAdmTest
     object UniDBGrid1: TUniDBGrid
       Left = 0
       Top = 41
-      Width = 473
+      Width = 465
       Height = 461
       Cursor = crHandPoint
       Hint = ''
@@ -55,7 +55,7 @@ object frmAdmTest: TfrmAdmTest
         item
           FieldName = 'tube'
           Title.Caption = 'Tabung'
-          Width = 129
+          Width = 84
           Font.Name = 'Roboto'
           ReadOnly = True
         end>
@@ -63,12 +63,13 @@ object frmAdmTest: TfrmAdmTest
     object UniContainerPanel3: TUniContainerPanel
       Left = 0
       Top = 0
-      Width = 473
+      Width = 465
       Height = 41
       Hint = ''
       ParentColor = False
       Align = alTop
       TabOrder = 2
+      ExplicitWidth = 473
     end
     object edCariNama: TUniEdit
       Left = 4
@@ -85,15 +86,16 @@ object frmAdmTest: TfrmAdmTest
     object UniContainerPanel7: TUniContainerPanel
       Left = 0
       Top = 502
-      Width = 473
+      Width = 465
       Height = 44
       Hint = ''
       ParentColor = False
       Align = alBottom
       TabOrder = 4
+      ExplicitWidth = 473
       object btnHapus: TUniSpeedButton
-        Left = 264
-        Top = 6
+        Left = 248
+        Top = 15
         Width = 89
         Height = 26
         Hint = ''
@@ -134,8 +136,8 @@ object frmAdmTest: TfrmAdmTest
         OnClick = btnHapusClick
       end
       object UniSpeedButton1: TUniSpeedButton
-        Left = 368
-        Top = 6
+        Left = 359
+        Top = 15
         Width = 91
         Height = 26
         Hint = ''
@@ -178,15 +180,16 @@ object frmAdmTest: TfrmAdmTest
     end
   end
   object UniContainerPanel2: TUniContainerPanel
-    Left = 473
+    Left = 465
     Top = 0
-    Width = 437
+    Width = 499
     Height = 546
     Hint = ''
     ParentColor = False
     Align = alClient
     TabOrder = 1
     ExplicitLeft = 521
+    ExplicitWidth = 437
     object UniLabel1: TUniLabel
       Left = 16
       Top = 24
@@ -223,7 +226,7 @@ object frmAdmTest: TfrmAdmTest
       TabOrder = 3
     end
     object btnSave: TUniSpeedButton
-      Left = 337
+      Left = 401
       Top = 517
       Width = 97
       Height = 26
@@ -279,7 +282,7 @@ object frmAdmTest: TfrmAdmTest
     object pcAddConf: TUniPageControl
       Left = 6
       Top = 78
-      Width = 428
+      Width = 490
       Height = 433
       Hint = ''
       ActivePage = tsGeneral
@@ -325,10 +328,10 @@ object frmAdmTest: TfrmAdmTest
         object UniLabel4: TUniLabel
           Left = 8
           Top = 32
-          Width = 72
+          Width = 30
           Height = 15
           Hint = ''
-          Caption = 'Abbreviation'
+          Caption = 'Abbr.'
           ParentFont = False
           Font.Height = -13
           Font.Name = 'Roboto'
@@ -352,30 +355,48 @@ object frmAdmTest: TfrmAdmTest
           Height = 17
           Hint = ''
           Caption = 'Confindential'
+          ParentFont = False
+          Font.Height = -13
+          Font.Name = 'Roboto'
           TabOrder = 4
+        end
+        object cbAdaHarga: TUniCheckBox
+          Left = 80
+          Top = 83
+          Width = 97
+          Height = 17
+          Hint = ''
+          Caption = 'Ada harga'
+          ParentFont = False
+          Font.Height = -13
+          Font.Name = 'Roboto'
+          TabOrder = 5
         end
       end
       object tsConTest: TUniTabSheet
         Hint = ''
         Caption = 'Conc. Test'
+        ExplicitWidth = 420
         object UniGroupBox1: TUniGroupBox
           Left = 0
           Top = 0
-          Width = 420
+          Width = 482
           Height = 405
           Hint = ''
           Caption = 'Concurrent tests'
           Align = alClient
           TabOrder = 0
+          ExplicitWidth = 420
           object UniContainerPanel4: TUniContainerPanel
             Left = 2
             Top = 15
-            Width = 416
+            Width = 478
             Height = 32
             Hint = ''
             ParentColor = False
             Align = alTop
             TabOrder = 1
+            ExplicitWidth = 416
             object UniSpeedButton2: TUniSpeedButton
               Left = 16
               Top = 4
@@ -457,7 +478,7 @@ object frmAdmTest: TfrmAdmTest
           object UniDBGrid2: TUniDBGrid
             Left = 2
             Top = 47
-            Width = 416
+            Width = 478
             Height = 356
             Hint = ''
             DataSource = dsCon
@@ -482,6 +503,111 @@ object frmAdmTest: TfrmAdmTest
                 Font.Name = 'Roboto'
               end>
           end
+        end
+      end
+      object UniTabSheet1: TUniTabSheet
+        Hint = ''
+        Caption = 'Nilai normal'
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 428
+        ExplicitHeight = 433
+        object UniContainerPanel5: TUniContainerPanel
+          Left = 0
+          Top = 0
+          Width = 482
+          Height = 41
+          Hint = ''
+          ParentColor = False
+          Align = alTop
+          TabOrder = 0
+          ExplicitWidth = 420
+          object UniButton1: TUniButton
+            Left = 3
+            Top = 10
+            Width = 25
+            Height = 25
+            Hint = ''
+            Caption = '^'
+            TabOrder = 1
+          end
+          object UniButton2: TUniButton
+            Left = 27
+            Top = 10
+            Width = 25
+            Height = 25
+            Hint = ''
+            Caption = 'v'
+            TabOrder = 2
+          end
+          object btnNNBaru: TUniButton
+            Left = 430
+            Top = 10
+            Width = 49
+            Height = 25
+            Hint = ''
+            Caption = 'Baru'
+            TabOrder = 3
+            OnClick = btnNNBaruClick
+          end
+          object UniButton4: TUniButton
+            Left = 375
+            Top = 10
+            Width = 49
+            Height = 25
+            Hint = ''
+            Caption = 'Hapus'
+            TabOrder = 4
+          end
+        end
+        object UniDBGrid3: TUniDBGrid
+          Left = 0
+          Top = 41
+          Width = 482
+          Height = 364
+          Hint = ''
+          DataSource = dsNilaiNormal
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgAlwaysShowSelection, dgConfirmDelete, dgAutoRefreshRow]
+          WebOptions.Paged = False
+          LoadMask.Message = 'Loading data...'
+          Align = alClient
+          TabOrder = 1
+          Columns = <
+            item
+              FieldName = 'priority'
+              Title.Caption = 'Priority'
+              Width = 50
+            end
+            item
+              FieldName = 'umur_awal'
+              Title.Caption = 'umur_awal'
+              Width = 64
+            end
+            item
+              FieldName = 'umur_akhir'
+              Title.Caption = 'umur_akhir'
+              Width = 64
+            end
+            item
+              FieldName = 'umur_satuan'
+              Title.Caption = 'umur_satuan'
+              Width = 64
+            end
+            item
+              FieldName = 'jenis_kelamin'
+              Title.Caption = 'jenis_kelamin'
+              Width = 64
+            end
+            item
+              FieldName = 'nilai_normal'
+              Title.Caption = 'nilai_normal'
+              Width = 64
+            end
+            item
+              FieldName = 'nilai_kritis'
+              Title.Caption = 'nilai_kritis'
+              Width = 64
+            end>
         end
       end
     end
@@ -585,7 +711,8 @@ object frmAdmTest: TfrmAdmTest
       'test.tube_id, '
       'tubes.nama tube,'
       'test.abbreviation,'
-      'test.flg_confidential'
+      'test.flg_confidential,'
+      'test.ada_harga'
       'from '
       'test'
       'left join harga on test.id = harga.test_id'
@@ -606,7 +733,7 @@ object frmAdmTest: TfrmAdmTest
         Name = 'ORGANISASI_ID'
         DataType = ftString
         ParamType = ptInput
-        Value = '0'
+        Value = '1'
       end>
   end
   object DSTest: TDataSource
@@ -623,8 +750,8 @@ object frmAdmTest: TfrmAdmTest
       'LEFT JOIN test t ON  tc.child_test_id = t.id'
       'WHERE'
       'tc.parent_test_id = :test_id')
-    Left = 489
-    Top = 376
+    Left = 353
+    Top = 360
     ParamData = <
       item
         Name = 'TEST_ID'
@@ -635,7 +762,31 @@ object frmAdmTest: TfrmAdmTest
   end
   object dsCon: TDataSource
     DataSet = QConTest
-    Left = 489
-    Top = 424
+    Left = 353
+    Top = 408
+  end
+  object QNilaiNormal: TFDQuery
+    Connection = UniMainModule.FDConnection1
+    SQL.Strings = (
+      'SELECT *'
+      'FROM'
+      'v_nilai_normal'
+      'WHERE'
+      'test_id = :test_id'
+      'order by priority')
+    Left = 393
+    Top = 368
+    ParamData = <
+      item
+        Name = 'TEST_ID'
+        DataType = ftString
+        ParamType = ptInput
+        Value = '100'
+      end>
+  end
+  object dsNilaiNormal: TDataSource
+    DataSet = QNilaiNormal
+    Left = 393
+    Top = 416
   end
 end
